@@ -1,0 +1,19 @@
+{
+  "name": "greet-library",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.0.9",
+    "@angular/core": "^11.0.9"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "main": "bundles/greet-library.umd.js",
+  "module": "fesm2015/greet-library.js",
+  "es2015": "fesm2015/greet-library.js",
+  "esm2015": "esm2015/greet-library.js",
+  "fesm2015": "fesm2015/greet-library.js",
+  "typings": "greet-library.d.ts",
+  "metadata": "greet-library.metadata.json",
+  "sideEffects": false
+}

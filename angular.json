@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "greet-library": {
+      "projectType": "library",
+      "root": "projects/greet-library",
+      "sourceRoot": "projects/greet-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/greet-library/tsconfig.lib.json",
+            "project": "projects/greet-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/greet-library/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/greet-library/src/test.ts",
+            "tsConfig": "projects/greet-library/tsconfig.spec.json",
+            "karmaConfig": "projects/greet-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/greet-library/tsconfig.lib.json",
+              "projects/greet-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "greet-library"
 }
